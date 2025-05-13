@@ -1,0 +1,158 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.button-row-block {
+  background-size: cover;
+  background-position: center;
+  padding: 16rem 0 4rem;
+  color: white;
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.button-row-block.no-bg {
+  padding: 4rem 0;
+}
+
+.button-row-block.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  z-index: 0;
+}
+
+.button-row-inner {
+  max-width: var(--default-container-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.button-row-content h1 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  margin: 0;
+}
+.dark-buttons .button-row-content h1, .dark-buttons .button-row-content p {
+  color: #000;
+}
+
+.button-row-inner.align-left .button-row-content {
+  text-align: left;
+}
+
+.button-row-inner.align-center .button-row-content {
+  text-align: center;
+}
+
+.button-row-inner.align-right .button-row-content {
+  text-align: right;
+}
+
+.button-row-inner.align-left .button-row-buttons {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.button-row-inner.align-center .button-row-buttons {
+  justify-content: center;
+  text-align: center;
+}
+
+.button-row-inner.align-right .button-row-buttons {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.button-row-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.no-bg .button-row-content:not(:has(h1)):not(:has(p)) + .button-row-buttons {
+  margin-top: 0;
+}
+
+.button-row-content:has(h1) p {
+  margin-top: 1rem;
+}
+
+.align-center .button-row-buttons {
+  justify-content: center;
+}
+
+.align-right .button-row-buttons {
+  justify-content: flex-end;
+}
+
+.row-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255,255,255,0);
+  border: 1px solid #fff;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.row-button:hover {
+  background-color: rgba(255,255,255,1);
+  border: 1px solid #fff;
+  color: #000 !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.dark-buttons .row-button {
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #000;
+  color: #000 !important;
+}
+
+.dark-buttons .row-button:hover {
+  background-color: rgba(0,0,0,1);
+  border: 1px solid #000;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.button-row-buttons.small-buttons {
+  gap: 0.7rem;
+}
+.button-row-buttons.small-buttons .row-button {
+  padding: 0.4rem 1rem;
+  font-size: 80%;
+}
+
+/*If here is placed before page title, hide title*/
+.button-row-block + .documentFirstHeading,
+.button-row-block ~ .documentFirstHeading {
+  display: none;
+}
+
+@container (max-width: 980px) {
+  .button-row-inner {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
