@@ -144,6 +144,62 @@ html {
   font-size: 80%;
 }
 
+/* List mode - completely unstyled container */
+.button-row-list-mode {
+  /* No styling whatsoever - just a plain div */
+}
+
+/* List display styling - minimal styling for simple list appearance */
+.button-row-block .button-row-list {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.button-row-list-mode .button-row-list {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.button-row-block .button-row-list p,
+.button-row-list-mode .button-row-list p {
+  max-width: var(--narrow-container-width);
+  margin: 0 auto 25px;
+  padding: 0;
+  background: none;
+  border: none;
+  line-height: normal;
+  font-size: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+.button-row-block .button-row-list a,
+.button-row-list-mode .button-row-list a {
+  color: inherit;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  border-radius: 0;
+  transition: none;
+  white-space: normal;
+}
+
+.button-row-block .button-row-list a:hover,
+.button-row-list-mode .button-row-list a:hover {
+  background: none;
+  border: none;
+  text-decoration: none;
+  transition: none;
+  color: inherit;
+}
+
 /*If here is placed before page title, hide title*/
 .button-row-block + .documentFirstHeading,
 .button-row-block ~ .documentFirstHeading {
